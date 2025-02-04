@@ -1,0 +1,45 @@
+{
+  "name": "adaun",
+  "version": "1.0.0",
+  "private": true,
+  "description": "adaun",
+  "devDependencies": {
+    "autoprefixer": "9.1.x",
+    "browser-sync": "2.27.10",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svgstore": "^7.0.0",
+    "gulp-uglify": "^3.0.2",
+    "run-sequence": "^2.2.1",
+    "sass": "^1.69.4",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.1.0"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/scss/**/*.scss\"",
+    "test": "npm run stylelint",
+    "build-all": "webpack --mode production && gulp build",
+    "build": "gulp build",
+    "start": "gulp start",
+    "watch-react": "webpack --watch",
+    "build-react": "webpack --mode production"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/*.js",
+    "source/img/**/*.svg",
+    "source/scss/**/*.scss"
+  ]
+}

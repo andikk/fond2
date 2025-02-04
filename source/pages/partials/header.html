@@ -1,0 +1,49 @@
+<header class="header page__header">
+  <div class="container container_descktop">
+    <div class="header__flex">
+      <img src="img/hero.png" alt="" class="header__img" />
+      <div class="header__content">
+        <nav class="navigation mb-4 js-menu">
+          <a href="#" class="navigation__logo-mobile">
+            <img src="img/icons/logo-mobile.svg" alt="" />
+          </a>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">О фонде</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Как стать инвестором</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Проекты</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Контакты</a>
+            </li>
+          </ul>
+
+          <button class="burger js-button" title="меню"></button>
+        </nav>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const menuEl = document.querySelector('.js-menu');
+            const buttonEl = menuEl.querySelector('.js-button');
+
+            buttonEl.addEventListener('click', () => {
+              menuEl.classList.toggle('active');
+              buttonEl.classList.toggle('active');
+            });
+          });
+        </script>
+
+        <h1 class="title mb-2">Северо-Кавказский федеральный университет</h1>
+        <div class="hero">
+          <h2 class="hero__title font-caveat">Инвестируй<br />в будущее!</h2>
+          <a href="" class="button mb-2">Сделать вклад</a>
+          <img src="img/qr-hero.png" alt="" class="hero__img" />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

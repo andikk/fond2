@@ -1,0 +1,33 @@
+<div class="container mb-6">
+  <div
+    class="progress wow2 fadeIn js-change"
+    data-wow-duration="1s"
+    data-wow-offset="350">
+    <p class="progress__title">Общая сумма фонда</p>
+    <div class="progress__line"></div>
+    <p class="progress__size">
+      <span class="js-fact-counter">7000000</span>
+    </p>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function (event) {
+    // анимация увеличения слайдов
+    const afterReveal = function () {
+      const factEl = document.querySelector('.js-fact-counter');
+      const od1 = new Odometer({
+        el: factEl,
+        value: 0,
+        format: '',
+      });
+      factEl.innerHTML = 7000000;
+    };
+
+    const wowCounter = new WOW({
+      mobile: false,
+      boxClass: 'wow2',
+      callback: afterReveal,
+    });
+    wowCounter.init();
+  });
+</script>

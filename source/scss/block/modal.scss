@@ -1,0 +1,69 @@
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 800px;
+  width: 100%;
+  background-color: $color-white;
+  padding: 4rem 1rem;
+  transition: 0.25s;
+  z-index: 103;
+  overflow-y: auto;
+
+  @media (min-width: $tablet-size-port) {
+    right: auto;
+    bottom: auto;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    box-shadow: $shadow-big;
+    padding: 2rem;
+  }
+
+  @media (min-width: $tablet-size-land) {
+    padding: 4rem;
+  }
+
+  &__name {
+    color: $color-black !important;
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+    line-height: 1.2 !important;
+
+    @media (min-width: $tablet-size-port) {
+      margin-bottom: 2rem !important;
+    }
+  }
+
+  &__text {
+    color: $color-black;
+    margin-bottom: 1rem;
+
+    @media (min-width: $tablet-size-port) {
+      margin-bottom: 2rem;
+    }
+
+    & > p {
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button {
+    outline: none;
+    border: none;
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s 0.3s;
+  }
+}

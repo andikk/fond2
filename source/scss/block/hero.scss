@@ -1,0 +1,30 @@
+.hero {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  @media (min-width: $tablet-size-land) {
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+
+    @media (min-width: $mobile-size-land) {
+      font-size: 80px;
+      margin-bottom: 4rem;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      font-size: 100px;
+    }
+  }
+
+  &__img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+  }
+}

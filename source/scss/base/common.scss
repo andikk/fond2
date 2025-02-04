@@ -1,0 +1,301 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+*::selection {
+  color: #fff;
+}
+
+:target:before {
+  content: '';
+  display: block;
+  height: 70px;
+  margin: -70px 0 0;
+
+  @media (min-width: $tablet-size-land) {
+    height: 90px;
+    margin: -90px 0 0;
+  }
+}
+
+ul[class] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+legend,
+td,
+th {
+  padding: 0.5rem;
+}
+
+html {
+  height: 100%;
+  background-color: #dfe6f1;
+  scroll-behavior: smooth;
+  margin: auto;
+}
+
+a {
+  transition: color 0.3s;
+  color: $color-white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-green;
+    text-decoration: none;
+  }
+}
+
+a[href$='.pdf']::before,
+a[href$='.doc']::before,
+a[href$='.docx']::before,
+a[href$='.zip']::before,
+a[href$='.PDF']::before,
+a[href$='.DOC']::before,
+a[href$='.DOCX']::before,
+a[href$='.ZIP']::before {
+  width: 19px;
+  height: 19px;
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+  background-repeat: no-repeat;
+  background-color: white;
+  border-radius: 3px;
+  padding: 11px;
+  background-position: center;
+}
+
+a[href$='.pdf']::before,
+a[href$='.PDF']::before {
+  background-image: url('../img/icons/file-pdf.svg');
+}
+
+a[href$='.doc']::before,
+a[href$='.DOC']::before {
+  background-image: url('../img/icons/file-word.svg');
+}
+
+a[href$='.docx']::before,
+a[href$='.DOCX']::before {
+  background-image: url('../img/icons/file-word.svg');
+}
+
+a[href$='.zip']::before,
+a[href$='.ZIP']::before {
+  background-image: url('../img/icons/file-zip.svg');
+}
+
+.visually-hidden:not(:focus, :active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  stroke-width: 0;
+  stroke: currentcolor;
+  fill: currentcolor;
+  margin-right: 0.3rem;
+  margin-top: 2px;
+  transform: translateY(1px);
+
+  &_no-margin {
+    margin-right: 0;
+  }
+}
+
+.user-content {
+  margin-bottom: 2rem;
+  background-color: $color-white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  @media (min-width: $mobile-size-land) {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  a,
+  a h1,
+  a h2,
+  a h3 {
+    transition: color 0.3s;
+    // color: $color-main;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+      // color: $color-main;
+      text-decoration: underline;
+    }
+  }
+
+  a.button,
+  a.card-notice {
+    color: #ffffff;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-top: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+
+    @media (min-width: $desktop-size-average) {
+      font-size: 1.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.1rem;
+
+    @media (min-width: $desktop-size-average) {
+      font-size: 1.4rem;
+    }
+  }
+
+  h3 {
+    font-size: 1rem;
+
+    @media (min-width: $desktop-size-average) {
+      font-size: 1.3rem;
+    }
+  }
+
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  table {
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+
+    th {
+      font-weight: bold;
+      padding: 5px;
+      background: #efefef;
+      border: 1px solid #ddd;
+    }
+
+    td {
+      padding: 5px 10px;
+      border: 1px solid #eee;
+      text-align: left;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: #fbfbfb;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #ffffff;
+    }
+
+    &.calendar__body {
+      word-break: initial;
+
+      th {
+        font-weight: bold;
+        padding: 0;
+        background: inherit;
+        border: none;
+      }
+
+      td {
+        overflow: hidden;
+        text-align: center;
+        width: 60px;
+        height: 42px;
+        padding: 0;
+      }
+    }
+  }
+
+  iframe {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    table {
+      width: 100%;
+
+      p {
+        margin: 4px 0;
+      }
+    }
+  }
+}
+
+.modal-is-opened {
+  overflow: hidden;
+
+  @media (min-width: $desktop-size-small) {
+    padding-right: 17px;
+  }
+}

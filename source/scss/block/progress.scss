@@ -1,0 +1,88 @@
+.progress {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 30px;
+  background-color: $color-white;
+  color: $color-black;
+  box-shadow: $shadow-small;
+
+  @media (min-width: $mobile-size-land) {
+    flex-flow: row nowrap;
+    font-size: 24px;
+    gap: 2rem;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: $color-white;
+    box-shadow: none;
+  }
+
+  @media (min-width: $tablet-size-land) {
+    font-size: 36px;
+    gap: 4rem;
+  }
+
+  &__title {
+    max-width: max-content;
+    margin-bottom: 0;
+  }
+
+  &__line {
+    display: none;
+
+    @media (min-width: $mobile-size-land) {
+      display: block;
+      position: relative;
+      flex: 1;
+      height: 5px;
+      background-color: $color-green;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20px;
+      height: 5px;
+      background-color: $color-green;
+    }
+
+    &::after {
+      transform: rotate(45deg) translateY(-8px);
+    }
+    &::before {
+      transform: rotate(-45deg) translateY(8px);
+    }
+  }
+
+  &__size {
+    max-width: max-content;
+    margin-bottom: 0;
+    padding: 8px 30px;
+    border-radius: 10px;
+    border: 2px solid $color-green;
+    color: $color-green;
+    font-size: 24px;
+
+    @media (min-width: $mobile-size-land) {
+      padding: 0;
+      border-radius: 0;
+      border: none;
+      color: $color-white;
+      font-size: 24px;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      font-size: 36px;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+<div class="overlay"></div>
+<div class="quotes mb-6">
+  <div class="container">
+    <h2 class="title mb-2">Цитаты</h2>
+    <div class="quotes__container">
+      <div class="card-quotes quotes__item">
+        <div class="card-quotes__person">
+          <img
+            src="img/person-1.png"
+            alt="Резников Александр Леонидович"
+            class="card-quotes__img" />
+          <div class="card-quotes__info">
+            <p class="card-quotes__name">Резников Александр Леонидович</p>
+            <p class="card-quotes__post">
+              Президент Ассоциации Ассоциация выпускников Северо-Кавказского
+              федерального университета
+            </p>
+          </div>
+        </div>
+        <div class="card-quotes__text" style="-webkit-box-orient: vertical">
+          <p>
+            «Знания. Наука. СКФУ», – так гласит гимн нашего университета. Через
+            эндаумент мы намерены создать надежную систему поддержки родного
+            Северо-Кавказского федерального университета!» «Знания. Наука.
+            СКФУ», – так гласит гимн нашего университета. Через эндаумент мы
+            намерены создать надежную систему поддержки родного
+            Северо-Кавказского федерального университета!» «Знания. Наука.
+            СКФУ», – так гласит гимн нашего университета. Через эндаумент мы
+            намерены создать надежную систему поддержки родного
+            Северо-Кавказского федерального университета!»
+          </p>
+        </div>
+        <p class="card-quotes__more">Подробнее</p>
+      </div>
+      <div class="card-quotes quotes__item">
+        <div class="card-quotes__person">
+          <img
+            src="img/person-2.png"
+            alt="Стехова Ольга Викторовна"
+            class="card-quotes__img" />
+          <div class="card-quotes__info">
+            <p class="card-quotes__name">Стехова Ольга Викторовна</p>
+            <p class="card-quotes__post">
+              Директор по финансам Северо-Кавказского федерального университета»
+            </p>
+          </div>
+        </div>
+        <div class="card-quotes__text" style="-webkit-box-orient: vertical">
+          <p>
+            «Знания. Наука. СКФУ», – так гласит гимн нашего университета. Через
+            эндаумент мы намерены создать надежную систему поддержки родного
+            Северо-Кавказского федерального университета!» «Знания. Наука.
+            СКФУ», – так гласит гимн нашего университета. Через эндаумент мы
+            намерены создать надежную систему поддержки родного
+            Северо-Кавказского федерального университета!» «Знания. Наука.
+            СКФУ», – так гласит гимн нашего университета. Через эндаумент мы
+            намерены создать надежную систему поддержки родного
+            Северо-Кавказского федерального университета!»
+          </p>
+        </div>
+        <p class="card-quotes__more">Подробнее</p>
+      </div>
+      <div class="card-quotes quotes__item">
+        <div class="card-quotes__person">
+          <img
+            src="img/person-3.png"
+            alt="Соколова Людмила Николаевна"
+            class="card-quotes__img" />
+          <div class="card-quotes__info">
+            <p class="card-quotes__name">Соколова Людмила Николаевна</p>
+            <p class="card-quotes__post">
+              Директор по информационной политике Северо-Кавказского
+              федерального университета»
+            </p>
+          </div>
+        </div>
+        <div class="card-quotes__text" style="-webkit-box-orient: vertical">
+          <p>
+            «Знания. Наука. СКФУ», – так гласит гимн нашего университета. Через
+            эндаумент мы намерены создать надежную систему поддержки родного
+            Северо-Кавказского федерального университета!» «Знания. Наука.
+            СКФУ», – так гласит гимн нашего университета. Через эндаумент мы
+            намерены создать надежную систему поддержки родного
+            Северо-Кавказского федерального университета!» «Знания. Наука.
+            СКФУ», – так гласит гимн нашего университета. Через эндаумент мы
+            намерены создать надежную систему поддержки родного
+            Северо-Кавказского федерального университета!»
+          </p>
+        </div>
+        <p class="card-quotes__more">Подробнее</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal">
+  <h2 class="title modal__name"></h2>
+  <div class="modal__text"></div>
+  <button class="modal__button button button--medium">Закрыть</button>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cardQuote = document.querySelectorAll('.card-quotes');
+    const modal = document.querySelector('.modal');
+    const modalTitle = document.querySelector('.modal__name');
+    const modalText = document.querySelector('.modal__text');
+    const modalButton = document.querySelector('.modal__button');
+    const overlay = document.querySelector('.overlay');
+
+    cardQuote.forEach((el) => {
+      let nameCard = el.querySelector('.card-quotes__name');
+      let textCard = el.querySelector('.card-quotes__text');
+
+      function openModal() {
+        modalTitle.innerHTML = nameCard.innerHTML;
+        modalText.innerHTML = textCard.innerHTML;
+        overlay.classList.add('active');
+        modal.classList.add('active');
+      }
+
+      el.addEventListener('click', openModal);
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      overlay.classList.remove('active');
+
+      setTimeout(() => {
+        modalTitle.innerHTML = null;
+        modalText.innerHTML = null;
+      }, 250);
+    }
+
+    [overlay, modalButton].map((el) =>
+      el.addEventListener('click', closeModal),
+    );
+  });
+</script>

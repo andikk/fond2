@@ -1,0 +1,91 @@
+.accordion {
+  margin-bottom: 0;
+
+  &__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  &__button {
+    position: relative;
+    background-color: $color-white;
+    color: $color-black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    line-height: 19px;
+    transition: 0.4s;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-grey;
+    padding-right: 3rem;
+
+    &:first-child {
+      border-top: 1px solid $color-grey;
+    }
+
+    &:active,
+    &:hover {
+      color: $color-green;
+    }
+
+    @media (min-width: $mobile-size-land) {
+      font-size: 16px;
+      padding: 2rem 0;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      font-size: 20px;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(50%);
+      width: 16px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: $color-black;
+      transition: 0.5s;
+    }
+    &::before {
+      transform: translateY(25%);
+    }
+
+    &::after {
+      transform: rotate(90deg);
+      top: 51%;
+    }
+
+    &.active {
+      &::after {
+        transform: rotate(0);
+        top: 52%;
+      }
+
+      & ~ .accordion__panel {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        color: $color-black;
+      }
+    }
+  }
+
+  &__col-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media (min-width: $tablet-size-land) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

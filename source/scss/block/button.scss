@@ -1,0 +1,41 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: max-content;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: $color-white;
+  padding: 12px 30px;
+  border-radius: 10px;
+  box-shadow: $shadow-small;
+  background-color: $color-green;
+  transition: 0.15s ease-out;
+  outline: none;
+  border: none;
+
+  &:active,
+  &:focus {
+    text-decoration: none;
+    background-color: #62b643;
+    color: $color-white;
+  }
+
+  @media (min-width: $desktop-size-average) {
+    font-size: 20px;
+    padding: 16px 40px;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #62b643;
+      color: $color-white;
+    }
+  }
+
+  &--medium {
+    font-size: 16px;
+    padding: 8px 30px;
+  }
+}

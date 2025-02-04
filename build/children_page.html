@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scale=1, shrink-to-fit=no" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link
+      href="css/odometer-theme-default.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="js/single/odometer.min.js"></script>
+    <script src="js/single/wow.min.js"></script>
+    <title>
+      Психологическая служба Северо-Кавказского федерального университета
+    </title>
+  </head>
+
+  <body class="page">
+    <header class="header header--no_bg page__header mt-2">
+  <div class="container">
+    <nav class="navigation navigation--children mb-4 js-menu">
+      <a href="#" class="navigation__logo-mobile">
+        <img src="img/icons/logo-mobile.svg" alt="" />
+      </a>
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Главная</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">О фонде</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Как стать инвестором</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Проекты</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Контакты</a>
+        </li>
+      </ul>
+
+      <button class="burger js-button" title="меню"></button>
+    </nav>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuEl = document.querySelector('.js-menu');
+        const buttonEl = menuEl.querySelector('.js-button');
+
+        buttonEl.addEventListener('click', () => {
+          menuEl.classList.toggle('active');
+          buttonEl.classList.toggle('active');
+        });
+      });
+    </script>
+  </div>
+</header>
+
+    <main class="page__main page__main--bg"></main>
+    <footer class="footer page__footer">
+  <div class="container">
+    <div class="contacts">
+      <a href="#" class="contacts__logo"
+        ><img src="img/icons/logo-footer.svg" alt=""
+      /></a>
+      <p class="contacts__item">
+        Адрес:<span class="contacts__content">г. Ставрополь, Пушкина, 1</span>
+      </p>
+      <p class="contacts__item">
+        Телефон:<a href="tel:88652330660" class="contacts__content"
+          >88652 330 660</a
+        >
+      </p>
+      <p class="contacts__item">
+        Электронная почта:<a
+          href="mailto:fondncfu@mail.ru"
+          class="contacts__content">
+          fondncfu@mail.ru</a
+        >
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

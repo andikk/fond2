@@ -1,0 +1,40 @@
+<header class="header header--no_bg page__header mt-2">
+  <div class="container">
+    <nav class="navigation navigation--children mb-4 js-menu">
+      <a href="#" class="navigation__logo-mobile">
+        <img src="img/icons/logo-mobile.svg" alt="" />
+      </a>
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Главная</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">О фонде</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Как стать инвестором</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Проекты</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Контакты</a>
+        </li>
+      </ul>
+
+      <button class="burger js-button" title="меню"></button>
+    </nav>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuEl = document.querySelector('.js-menu');
+        const buttonEl = menuEl.querySelector('.js-button');
+
+        buttonEl.addEventListener('click', () => {
+          menuEl.classList.toggle('active');
+          buttonEl.classList.toggle('active');
+        });
+      });
+    </script>
+  </div>
+</header>

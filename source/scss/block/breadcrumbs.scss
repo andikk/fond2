@@ -1,0 +1,51 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.6rem !important;
+  margin-bottom: 1.6rem !important;
+  padding: 0;
+
+  &__link {
+    font-size: 15px;
+    text-decoration: none;
+    // color: $color-grey;
+  }
+
+  &__item {
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    // color: $color-black;
+
+    &::after {
+      display: block;
+      content: '›';
+      margin-left: 0.5rem;
+      // color: $color-grey;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    & > a {
+      // color: $color-grey;
+      font-weight: 400;
+      font-size: 15px;
+
+      @media (min-width: $tablet-size-land) {
+        transition: 0.25s;
+        &:hover {
+          // color: $color-main;
+        }
+      }
+    }
+  }
+
+  &__item:not(:last-child) &__link {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.quotes {
+  background-color: $color-blue;
+  padding: 4rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media (min-width: $tablet-size-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $desktop-size-small) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: $desktop-size-small) {
+    &__item:first-child {
+      grid-column: 1;
+    }
+    @media (min-width: $tablet-size-port) {
+      &__item:first-child {
+        grid-column: span 2;
+      }
+    }
+  }
+}

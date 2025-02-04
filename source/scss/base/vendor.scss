@@ -1,0 +1,26 @@
+//  для галереи
+.parvus-is-open {
+  overflow: hidden;
+}
+
+body.page.bvi-active {
+  margin: 0 auto;
+}
+
+// для админки битрикса
+img.ml-item-thumb.ml-item-no-thumb + .ml-item-title {
+  white-space: initial !important;
+  height: auto !important;
+  word-break: break-all !important;
+}
+
+img.ml-item-thumb.ml-item-no-thumb {
+  display: none;
+}
+// не работает
+div.ml-item-title {
+  width: auto !important;
+  font-weight: bold;
+  height: auto !important;
+  overflow: auto !important;
+}

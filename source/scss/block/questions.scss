@@ -1,0 +1,14 @@
+.questions {
+  padding: 2rem;
+  box-shadow: $shadow-small;
+  background-color: $color-white;
+  border-radius: 30px;
+
+  @media (min-width: $tablet-size-land) {
+    padding: 4rem 8rem;
+  }
+
+  &__title {
+    color: $color-black !important;
+  }
+}

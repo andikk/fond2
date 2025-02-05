@@ -19,7 +19,11 @@
 
   <body class="page">
     @@include('partials/header_children.html')
-    <main class="page__main page__main--bg"></main>
+    <main class="page__main page__main--padding">
+      @@include('partials/info.html') @@include('partials/projects.html')
+      @@include('partials/progress.html') @@include('partials/questions.html')
+      @@include('partials/quotes.html') @@include('partials/partners.html')
+    </main>
     @@include('partials/footer.html')
     <script src="js/bundle.js"></script>
   </body>

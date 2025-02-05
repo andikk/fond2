@@ -1,7 +1,63 @@
 <header class="header page__header">
   <div class="container container_descktop">
     <div class="header__flex">
-      <img src="img/hero.png" alt="" class="header__img" />
+      <div class="header__slider">
+        <div
+          class="slider slider--main swiper js-main-slider"
+          data-wow-duration="1s">
+          <div class="swiper-wrapper">
+            <a href="##" class="swiper-slide">
+              <img
+                class="slider__image"
+                src="img/hero.png"
+                alt="Заголовок слайда"
+                title="Заголовок слайда" />
+            </a>
+            <a href="##" class="swiper-slide">
+              <img
+                class="slider__image"
+                src="img/hero.png"
+                alt="Заголовок слайда"
+                title="Заголовок слайда" />
+            </a>
+            <a href="##" class="swiper-slide">
+              <img
+                class="slider__image"
+                src="img/hero.png"
+                alt="Заголовок слайда"
+                title="Заголовок слайда" />
+            </a>
+            <a href="##" class="swiper-slide">
+              <img
+                class="slider__image"
+                src="img/hero.png"
+                alt="Заголовок слайда"
+                title="Заголовок слайда" />
+            </a>
+          </div>
+          <div class="swiper-button-next slider__next-btn js-main-slider-next">
+            <img src="img/icons/arrow-right.png" alt="" />
+          </div>
+          <div class="swiper-button-prev slider__prev-btn js-main-slider-prev">
+            <img src="img/icons/arrow-left.png" alt="" />
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.js-main-slider', {
+              autoplay: {
+                delay: 5000,
+              },
+              navigation: {
+                nextEl: '.js-main-slider-next',
+                prevEl: '.js-main-slider-prev',
+              },
+            });
+          });
+        </script>
+      </div>
+
       <div class="header__content">
         <nav class="navigation mb-4 js-menu">
           <a href="#" class="navigation__logo-mobile">
@@ -10,9 +66,37 @@
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">О фонде</a>
+              <ul class="navigation__droplist">
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">История</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Как работать</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Руководство</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Документы</a>
+                </li>
+              </ul>
             </li>
             <li class="navigation__item">
               <a href="#" class="navigation__link">Как стать инвестором</a>
+              <ul class="navigation__droplist">
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Студентам</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Выпускникам</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Физ. лицам</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Юр. лицам</a>
+                </li>
+              </ul>
             </li>
             <li class="navigation__item">
               <a href="#" class="navigation__link">Проекты</a>
@@ -33,6 +117,12 @@
             buttonEl.addEventListener('click', () => {
               menuEl.classList.toggle('active');
               buttonEl.classList.toggle('active');
+
+              if (menuEl.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+              } else {
+                document.body.style.overflow = null;
+              }
             });
           });
         </script>

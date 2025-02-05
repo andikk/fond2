@@ -82,18 +82,20 @@
       }
     }
   }
+
   &__more {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     width: max-content;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     align-self: flex-end;
     margin-bottom: 0;
     transition: 0.15s;
     padding-top: 0.5rem;
+    color: $color-grey;
 
     &::after {
       content: '';

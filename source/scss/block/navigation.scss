@@ -29,6 +29,7 @@
     .navigation__list {
       visibility: visible;
       opacity: 1;
+      overflow-y: auto;
     }
 
     .navigation__item {
@@ -73,6 +74,7 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,6 +88,12 @@
     @media (min-width: $mobile-size-land) {
       opacity: 1;
       padding: 0.5rem 1rem;
+      &:hover {
+        .navigation__droplist {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
     }
 
     @media (min-width: $desktop-size-average) {
@@ -165,6 +173,75 @@
 
     & > img {
       width: 100%;
+    }
+  }
+
+  &__droplist {
+    @media (min-width: $mobile-size-land) {
+      position: absolute;
+      max-width: 180px;
+      width: max-content;
+      padding: 20px !important;
+      border-radius: 10px;
+      background-color: rgb(0 0 0 / 50%);
+      left: 0;
+      top: 100%;
+      transition: 0.15s;
+      backdrop-filter: blur(6px);
+      box-shadow: $shadow-small;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__droplist-item {
+    border-bottom: 1px solid $color-grey;
+    transition: 0.15s;
+    line-height: 1.2;
+    padding: 10px 0 10px 20px;
+    margin: 0;
+
+    &:first-child {
+      border-top: 1px solid $color-grey;
+      margin-top: 10px;
+    }
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $mobile-size-land) {
+      padding: 0 0 4px 0;
+      margin-bottom: 10px;
+
+      &:first-child {
+        border-top: none;
+        margin-top: 0;
+      }
+      // &:last-child {
+      //   border-bottom: none;
+      //   padding-bottom: 0;
+      // }
+    }
+
+    & > a {
+      font-size: 18px;
+      font-weight: 400;
+      color: $color-black;
+
+      @media (min-width: $mobile-size-land) {
+        color: $color-white;
+        font-weight: 300;
+        font-size: 16px;
+      }
+    }
+
+    &:hover {
+      border-color: $color-green;
+
+      .navigation__droplist-link {
+        color: $color-green;
+      }
     }
   }
 

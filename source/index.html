@@ -10,8 +10,10 @@
       href="css/odometer-theme-default.css"
       rel="stylesheet"
       type="text/css" />
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
     <script src="js/single/odometer.min.js"></script>
     <script src="js/single/wow.min.js"></script>
+    <script src="js/single/swiper.min.js"></script>
     <title>
       Психологическая служба Северо-Кавказского федерального университета
     </title>
@@ -21,7 +23,63 @@
     <header class="header page__header">
   <div class="container container_descktop">
     <div class="header__flex">
-      <img src="img/hero.png" alt="" class="header__img" />
+      <div class="header__slider">
+        <div
+          class="slider slider--main swiper js-main-slider"
+          data-wow-duration="1s">
+          <div class="swiper-wrapper">
+            <a href="##" class="swiper-slide">
+              <img
+                class="slider__image"
+                src="img/hero.png"
+                alt="Заголовок слайда"
+                title="Заголовок слайда" />
+            </a>
+            <a href="##" class="swiper-slide">
+              <img
+                class="slider__image"
+                src="img/hero.png"
+                alt="Заголовок слайда"
+                title="Заголовок слайда" />
+            </a>
+            <a href="##" class="swiper-slide">
+              <img
+                class="slider__image"
+                src="img/hero.png"
+                alt="Заголовок слайда"
+                title="Заголовок слайда" />
+            </a>
+            <a href="##" class="swiper-slide">
+              <img
+                class="slider__image"
+                src="img/hero.png"
+                alt="Заголовок слайда"
+                title="Заголовок слайда" />
+            </a>
+          </div>
+          <div class="swiper-button-next slider__next-btn js-main-slider-next">
+            <img src="img/icons/arrow-right.png" alt="" />
+          </div>
+          <div class="swiper-button-prev slider__prev-btn js-main-slider-prev">
+            <img src="img/icons/arrow-left.png" alt="" />
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.js-main-slider', {
+              autoplay: {
+                delay: 5000,
+              },
+              navigation: {
+                nextEl: '.js-main-slider-next',
+                prevEl: '.js-main-slider-prev',
+              },
+            });
+          });
+        </script>
+      </div>
+
       <div class="header__content">
         <nav class="navigation mb-4 js-menu">
           <a href="#" class="navigation__logo-mobile">
@@ -30,9 +88,37 @@
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">О фонде</a>
+              <ul class="navigation__droplist">
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">История</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Как работать</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Руководство</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Документы</a>
+                </li>
+              </ul>
             </li>
             <li class="navigation__item">
               <a href="#" class="navigation__link">Как стать инвестором</a>
+              <ul class="navigation__droplist">
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Студентам</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Выпускникам</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Физ. лицам</a>
+                </li>
+                <li class="navigation__droplist-item">
+                  <a href="#" class="navigation__droplist-link">Юр. лицам</a>
+                </li>
+              </ul>
             </li>
             <li class="navigation__item">
               <a href="#" class="navigation__link">Проекты</a>
@@ -53,6 +139,12 @@
             buttonEl.addEventListener('click', () => {
               menuEl.classList.toggle('active');
               buttonEl.classList.toggle('active');
+
+              if (menuEl.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+              } else {
+                document.body.style.overflow = null;
+              }
             });
           });
         </script>
@@ -81,25 +173,33 @@
   <h2 class="title mb-4">Как работает фонд?</h2>
   <div class="info">
     <div class="card-info info__item">
-      <img src="img/icons/road-1.svg" alt="" class="card-info__img" />
+      <svg class="card-info__img">
+        <use xlink:href="img/svg-sprite.svg#i-road-1"></use>
+      </svg>
       <p class="card-info__text">
         Вы делаете благотворительное пожертвование в целевой капитал СКФУ
       </p>
     </div>
     <div class="card-info info__item">
-      <img src="img/icons/road-2.svg" alt="" class="card-info__img" />
+      <svg class="card-info__img">
+        <use xlink:href="img/svg-sprite.svg#i-road-2"></use>
+      </svg>
       <p class="card-info__text">
         Фонд СКФУ передает Ваше пожертвование в доверительное управление
       </p>
     </div>
     <div class="card-info info__item">
-      <img src="img/icons/road-3.svg" alt="" class="card-info__img" />
+      <svg class="card-info__img">
+        <use xlink:href="img/svg-sprite.svg#i-road-3"></use>
+      </svg>
       <p class="card-info__text">
         Управляющая компания инвестирует средства, составляющие целевой капитал
       </p>
     </div>
     <div class="card-info info__item">
-      <img src="img/icons/road-4.svg" alt="" class="card-info__img" />
+      <svg class="card-info__img">
+        <use xlink:href="img/svg-sprite.svg#i-road-4"></use>
+      </svg>
       <p class="card-info__text">
         Полученный доход направляется на развитие СКФУ
       </p>
@@ -115,8 +215,10 @@
       <img src="img/project-1.png" alt="" class="card-project__img" />
       <a href="#" class="card-project__link">
         <div class="card-project__text">
-          <p class="card-project__title">Социальные проекты</p>
-          <p class="card-project__more">Подробнее</p>
+          <p class="card-project__title" style="-webkit-box-orient: vertical">
+            Социальные проекты
+          </p>
+          <!-- <p class="card-project__more">Подробнее</p> -->
         </div>
         <img src="img/qr-hero.png" alt="qr код" class="card-project__qr" />
       </a>
@@ -125,8 +227,10 @@
       <img src="img/project-2.png" alt="" class="card-project__img" />
       <a href="#" class="card-project__link">
         <div class="card-project__text">
-          <p class="card-project__title">Социальные проекты</p>
-          <p class="card-project__more">Подробнее</p>
+          <p class="card-project__title" style="-webkit-box-orient: vertical">
+            Социальные проекты
+          </p>
+          <!-- <p class="card-project__more">Подробнее</p> -->
         </div>
         <img src="img/qr-hero.png" alt="qr код" class="card-project__qr" />
       </a>
@@ -135,8 +239,10 @@
       <img src="img/project-3.png" alt="" class="card-project__img" />
       <a href="#" class="card-project__link">
         <div class="card-project__text">
-          <p class="card-project__title">Социальные проекты</p>
-          <p class="card-project__more">Подробнее</p>
+          <p class="card-project__title" style="-webkit-box-orient: vertical">
+            Социальные проекты
+          </p>
+          <!-- <p class="card-project__more">Подробнее</p> -->
         </div>
         <img src="img/qr-hero.png" alt="qr код" class="card-project__qr" />
       </a>
@@ -145,8 +251,10 @@
       <img src="img/project-4.png" alt="" class="card-project__img" />
       <a href="#" class="card-project__link">
         <div class="card-project__text">
-          <p class="card-project__title">Социальные проекты</p>
-          <p class="card-project__more">Подробнее</p>
+          <p class="card-project__title" style="-webkit-box-orient: vertical">
+            Социальные проекты
+          </p>
+          <!-- <p class="card-project__more">Подробнее</p> -->
         </div>
         <img src="img/qr-hero.png" alt="qr код" class="card-project__qr" />
       </a>
@@ -337,6 +445,7 @@
             src="img/person-1.png"
             alt="Резников Александр Леонидович"
             class="card-quotes__img" />
+
           <div class="card-quotes__info">
             <p class="card-quotes__name">Резников Александр Леонидович</p>
             <p class="card-quotes__post">
@@ -358,7 +467,7 @@
             Северо-Кавказского федерального университета!»
           </p>
         </div>
-        <p class="card-quotes__more">Подробнее</p>
+        <p class="card-quotes__more">подробнее</p>
       </div>
       <div class="card-quotes quotes__item">
         <div class="card-quotes__person">
@@ -386,7 +495,7 @@
             Северо-Кавказского федерального университета!»
           </p>
         </div>
-        <p class="card-quotes__more">Подробнее</p>
+        <p class="card-quotes__more">подробнее</p>
       </div>
       <div class="card-quotes quotes__item">
         <div class="card-quotes__person">
@@ -415,7 +524,7 @@
             Северо-Кавказского федерального университета!»
           </p>
         </div>
-        <p class="card-quotes__more">Подробнее</p>
+        <p class="card-quotes__more">подробнее</p>
       </div>
     </div>
   </div>
@@ -444,6 +553,7 @@
         modalText.innerHTML = textCard.innerHTML;
         overlay.classList.add('active');
         modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
 
       el.addEventListener('click', openModal);
@@ -456,6 +566,7 @@
       setTimeout(() => {
         modalTitle.innerHTML = null;
         modalText.innerHTML = null;
+        document.body.style.overflow = null;
       }, 250);
     }
 

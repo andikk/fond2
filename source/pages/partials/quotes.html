@@ -9,6 +9,7 @@
             src="img/person-1.png"
             alt="Резников Александр Леонидович"
             class="card-quotes__img" />
+
           <div class="card-quotes__info">
             <p class="card-quotes__name">Резников Александр Леонидович</p>
             <p class="card-quotes__post">
@@ -30,7 +31,7 @@
             Северо-Кавказского федерального университета!»
           </p>
         </div>
-        <p class="card-quotes__more">Подробнее</p>
+        <p class="card-quotes__more">подробнее</p>
       </div>
       <div class="card-quotes quotes__item">
         <div class="card-quotes__person">
@@ -58,7 +59,7 @@
             Северо-Кавказского федерального университета!»
           </p>
         </div>
-        <p class="card-quotes__more">Подробнее</p>
+        <p class="card-quotes__more">подробнее</p>
       </div>
       <div class="card-quotes quotes__item">
         <div class="card-quotes__person">
@@ -87,7 +88,7 @@
             Северо-Кавказского федерального университета!»
           </p>
         </div>
-        <p class="card-quotes__more">Подробнее</p>
+        <p class="card-quotes__more">подробнее</p>
       </div>
     </div>
   </div>
@@ -116,6 +117,7 @@
         modalText.innerHTML = textCard.innerHTML;
         overlay.classList.add('active');
         modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
 
       el.addEventListener('click', openModal);
@@ -128,6 +130,7 @@
       setTimeout(() => {
         modalTitle.innerHTML = null;
         modalText.innerHTML = null;
+        document.body.style.overflow = null;
       }, 250);
     }
 

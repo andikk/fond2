@@ -5,6 +5,17 @@
 
   @media (min-width: $tablet-size-land) {
     align-items: flex-start;
+    background-image: url(../../img/icons/logo-hero.svg);
+    background-size: 160px;
+    background-position: bottom 0rem right;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $desktop-size-average) {
+    background-size: 330px;
+  }
+  @media (min-width: $desktop-size-large) {
+    background-position: bottom 0rem left 26rem;
   }
 
   &__title {

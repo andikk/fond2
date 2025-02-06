@@ -20,6 +20,14 @@
   }
 }
 
+.text-title {
+  font-size: 16px;
+
+  @media (min-width: $desktop-size-small) {
+    font-size: 22px;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -251,6 +259,14 @@ a {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
+  color: $color-green;
+  transition: 0.15s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: rgb(0, 255, 0);
+  }
 }
 
 body[style*='overflow: hidden'] {

@@ -74,15 +74,14 @@ a[href$='.PDF']::before,
 a[href$='.DOC']::before,
 a[href$='.DOCX']::before,
 a[href$='.ZIP']::before {
-  width: 19px;
-  height: 19px;
   content: '';
+  width: 20px;
+  height: 20px;
   vertical-align: middle;
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 8px;
   background-repeat: no-repeat;
-  background-color: white;
-  border-radius: 3px;
+  background-size: contain;
   padding: 11px;
   background-position: center;
 }

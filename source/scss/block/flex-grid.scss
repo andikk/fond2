@@ -1,0 +1,81 @@
+.flex-grid {
+  margin-left: -15px;
+  margin-right: -15px;
+
+  @media (min-width: $tablet-size-land) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &_center {
+    @media (min-width: $tablet-size-land) {
+      justify-content: center;
+    }
+  }
+
+  &__col-25 {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+
+  &__col-33 {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+
+  &__col-50 {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 100%;
+
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__col-30 {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 100%;
+
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+  }
+
+  &__col-70 {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 100%;
+    padding-top: 1rem;
+
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 70%;
+      max-width: 70%;
+      padding-top: 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.documents {
+  padding: 2rem;
+  border-radius: 30px;
+  background-color: $color-white;
+  box-shadow: $shadow-big;
+
+  @media (min-width: $tablet-size-port) {
+    padding: 4rem 8rem;
+  }
+
+  &__item {
+    border-bottom: 1px solid $color-grey;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    font-size: 15px;
+    color: $color-black;
+    transition: 0.15s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-green;
+    }
+
+    @media (min-width: $tablet-size-port) {
+      font-size: 18px;
+    }
+  }
+}
